@@ -164,7 +164,10 @@ body{
     gap: 2rem;
 }
 
-.link{
+.link:link,
+.link:visisted{
+    outline: none;
+    text-decoration: none;
     color: var(--grey-light--2);
     display: flex;
     align-items: center;
