@@ -165,7 +165,7 @@ body{
 }
 
 .link:link,
-.link:visisted{
+.link:visited{
     outline: none;
     text-decoration: none;
     color: var(--grey-light--2);
