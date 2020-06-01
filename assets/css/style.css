@@ -1,0 +1,269 @@
+/* base */
+:root{
+    --green: #05B993;
+    --yellow: #fab700;
+    --white: white;
+    --grey: #333333;
+    --grey-light--1: #556270;
+    --grey-light--2: #888888;
+    --grey-dark: #222222;
+    --facebook: #3b5999;
+    --github: #222222;
+    --instagram: #c32aa3;
+    --linked-in: #0077B5;
+    --medium: #02b875;
+    --twitter: #1da1f2;
+
+    --delay: .3s;
+}
+
+::selection{
+    background-color: var(--yellow);
+    color: var(--white);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.body{
+    color: var(--grey-dark);
+    display: grid;
+    grid-template-columns: [header-start] 1fr [header-end section-start] 2fr [section-end];
+    grid-template-rows: 100vh;
+}
+
+@media only screen and (max-width: 56.5em){
+    .body{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+}
+
+
+/* typography */
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+}
+
+.heading--1{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+
+.heading--2{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* utility */
+.float--right{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+}
+
+@media only screen and (max-width: 37.5em){
+    .float--right{
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+
+.yellow{
+    color: var(--yellow);
+}
+
+.divider{
+    height: .4rem;
+    width: 100%;
+    background-color: var(--green);
+    border-radius: .1rem;
+    margin-top: -2rem;
+}
+
+.hidden{
+    display: none;
+}
+
+
+/* components */
+.header{
+    grid-column: header-start / header-end;
+    background: var(--green) url('https://devcareer.io/images/bg.svg') right;
+}
+
+.header__container{
+    margin: 10rem 0;
+    width: 100%;
+    display: grid;
+    gap: 2rem;
+    align-content: center;
+    justify-content: center;
+}
+
+.header__figure{
+    border: solid .5rem white;
+    border-radius: .5rem;
+    width: 30rem;
+    height: 30rem;
+}
+
+.header__img{
+    height: 100%;
+}
+
+.header__title-box:link,
+.header__title-box:visited{
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding: 1.5rem 5rem;
+    text-align: center;
+    background-color: var(--white);
+    border-radius: .2rem;
+    transition: all var(--delay);
+}
+
+.header__title-box:hover{
+    background-color: var(--grey);
+    color: var(--white);
+}
+
+
+.section{
+    position: relative;
+    grid-column: section-start / section-end;
+    padding: 10rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+@media only screen and (max-width: 37.5em){
+    .section{
+        padding: 10rem 2rem;
+    }
+}
+
+.section__container{
+    display: grid;
+    align-items: center;
+    height: 50%;
+    gap: 2rem;
+}
+
+.link{
+    color: var(--grey-light--2);
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 37.5em){
+    .link{
+        width: 100%;
+        padding: 2rem 6.5rem;
+        border-bottom: solid .1rem gainsboro;
+    }
+}
+
+.link__svg{
+    height: 1.4rem;
+    margin-right: 1rem;
+    fill: var(--grey-light--2);
+}
+
+.tag__container{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-items: center;
+}
+.tag{
+    background-color: var(--grey-light--1);
+    color: var(--white);
+    border-radius: .3rem;
+    padding: .7rem 1.5rem;
+    font-size: 1.4rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all var(--delay);
+}
+
+.tag:hover{
+    filter: brightness(80%);
+}
+
+.paragraph{
+    color: var(--grey-light--2);
+}
+
+.social{
+    margin-top: 3rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.social__icons{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.social__link:link,
+.social__link:visited,
+.social__link:active{
+    text-decoration: none;
+    outline: none;
+    height: 5rem;
+    width: 5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+.social__link:hover .social__svg{
+    transform: rotate(-10deg) scale(1.2);
+}
+
+.social__svg{
+    transition: all var(--delay);
+    transform: rotate(0deg) scale(1);
+    height: 100%;
+    width: 100%;
+}
+
+.facebook{
+    border: solid .1rem var(--facebook);
+}
+
+.github{
+    border: solid .1rem var(--github);
+}
+
+.instagram{
+    border: solid .1rem var(--instagram);
+}
+.linked-in{
+    border: solid .1rem var(--linked-in);
+}
+.medium{
+    border: solid .1rem var(--medium);
+}
+.twitter{
+    border: solid .1rem var(--twitter);
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+      name="description"
+      content="DevTask 2"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <meta name="theme-color" content="#05B993" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olufemi Samuel (@okikioluwa) - DevCareer</title>
+</head>
+<body class="body">
+
+    <header class="header">
+        <div class="header__container">
+            <figure class="header__figure">
+                <img class = "header__img" src="./assets/img/headerImg.jpg" alt="Header Image">
+            </figure>
+
+            <h1 class="heading--1 hidden" id="header__heading">OLUFEMI Okikioluwa</h1>
+    
+            <a  href="mailto:kikkyboysven@gmail.com" class="header__title-box">
+                <span class="header__title">Web Developer</span>
+            </a>
+        </div>
+    </header>
+    
+    <section class="section">
+        <a class="link float--right">
+            <object type="image/svg+xml" data="./assets/svg/larrow.svg" class="link__svg"></object>
+            <p class="link__text">Create your <span class="yellow">DevCareer.io</span> page</p>
+        </a>
+
+        <div class="section__container">
+            <h1 class="heading--1" id="section__heading">OLUFEMI Okikioluwa</h1>
+
+            <div class="tag__container">
+                <span class="tag">Front-end Developer</span>
+                <span class="tag">Graphics Designer</span>
+                <span class="tag">App Developer</span>
+                <span class="tag">Musician</span> 
+            </div>
+
+            <div class="divider"></div>
+
+            <p class="paragraph">
+                Hey there! I'm a Web Developer with a kanck for intuituve user interfaces and good design taste, and a music lover.
+            </p>
+
+            <div class="social">
+                <h2 class="heading--2">Find me on</h2>
+
+                <div class="social__icons">
+                    <a target="_blank" href = "https://www.facebook.com/okiki.olufemi" class="social__link facebook"><img class = "social__svg facebook-svg" src="./assets/svg/facebook-original.svg"/></a>
+                    <a target="_blank" href="https://github.com/kikks" class="social__link github"><img src="./assets/svg/github-original.svg" class="social__svg github-svg"/></a>
+                    <a target="_blank" href="https://www.instagram.com/_kikks7/" class="social__link instagram"><img src="./assets/svg/instagram-original.svg" class="social__svg instagram-svg"/></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/okikioluwa-olufemi-2206281ab/" class="social__link linked-in"><img src="./assets/svg/linkedin-original.svg" class="social__svg linked-in-svg"/></a>
+                    <a target="_blank" href="https://medium.com/@kikkyboysven" class="social__link medium"><img src="./assets/svg/medium.svg" class="social__svg medium-svg"/></a>
+                    <a target="_blank" href="https://twitter.com/kikks07" class="social__link twitter"><img src="./assets/svg/twitter-original.svg" class="social__svg twitter-svg"/></a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+</body>
+
+<script>
+    let headerHeading = document.getElementById('header__heading');
+    let sectionHeading = document.getElementById('section__heading');
+    let breakPoint = window.matchMedia('(max-width: 37.5em)');
+    
+    toggleVisibilityHandler = (breakPoint) => {
+        if(breakPoint.matches){
+            headerHeading.className = "heading--1 header__heading";
+            sectionHeading.className = "heading--1 section__heading hidden";
+            
+        }
+        else{
+            headerHeading.className = "heading--1 header__heading hidden";
+            sectionHeading.className = "heading--1 section__heading";
+        }
+    }
+
+    toggleVisibilityHandler(breakPoint);
+    breakPoint.addListener(toggleVisibilityHandler); 
+
+</script>
+
+</html>
